@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    database: PORTFOLIO_DE
+    schema: RAW
+    tables:
+      - name: accounts
+      - name: users
+      - name: subscription_events
+      - name: invoices
+      - name: subscription_monthly_snapshot
+      - name: support_tickets
+      - name: marketing_spend_daily
+      - name: product_events

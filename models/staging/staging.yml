@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: stg_accounts
+    columns:
+      - name: account_id
+        data_tests: [not_null, unique]
+      - name: signup_at
+        data_tests: [not_null]
+      - name: acquisition_channel
+        data_tests: [not_null]
+
+  - name: stg_users
+    columns:
+      - name: user_id
+        data_tests: [not_null, unique]
+      - name: account_id
+        data_tests: [not_null]
+
+  - name: stg_subscription_events
+    columns:
+      - name: account_id
+        data_tests: [not_null]
+      - name: event_at
+        data_tests: [not_null]
+      - name: event_type
+        data_tests: [not_null]
+
+  - name: stg_invoices
+    columns:
+      - name: invoice_id
+        data_tests: [not_null, unique]
+      - name: account_id
+        data_tests: [not_null]
+
+  - name: stg_subscription_monthly_snapshot
+    columns:
+      - name: month_start
+        data_tests: [not_null]
+      - name: account_id
+        data_tests: [not_null]
+
+  - name: stg_support_tickets
+    columns:
+      - name: ticket_id
+        data_tests: [not_null, unique]
+      - name: account_id
+        data_tests: [not_null]
+
+  - name: stg_marketing_spend_daily
+    columns:
+      - name: spend_date
+        data_tests: [not_null]
+      - name: channel
+        data_tests: [not_null]
+
+  - name: stg_product_events
+    columns:
+      - name: event_id
+        data_tests: [not_null, unique]
+      - name: account_id
+        data_tests: [not_null]
+      - name: event_ts
+        data_tests: [not_null]
