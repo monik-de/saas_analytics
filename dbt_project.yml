@@ -13,7 +13,7 @@ clean-targets:
   - dbt_packages
 
 models:
-  startup_saas_analytics:
+  saas_analytics:
     +persist_docs:
       relation: true
       columns: true

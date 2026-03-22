@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_account
+    columns:
+      - name: account_id
+        data_tests: [not_null, unique]
+
+  - name: fct_growth_kpis_monthly
+    columns:
+      - name: month_start
+        data_tests: [not_null, unique]
+
+  - name: fct_channel_efficiency_monthly
+    columns:
+      - name: month_channel_key
+        data_tests: [not_null, unique]
+
+  - name: fct_cohort_retention
+    columns:
+      - name: cohort_month_number_key
+        data_tests: [not_null, unique]
+
+  - name: fct_account_health_monthly
+    columns:
+      - name: account_month_key
+        data_tests: [not_null, unique]
